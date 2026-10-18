@@ -1,29 +1,30 @@
-# Welcome to your Lovable project
+# Oficina Lume
 
-This project was built with [Lovable](https://lovable.dev).
+Site de marketing e área de cliente para uma oficina de bicicletas fictícia em Lisboa. Frontend puro: sem backend, os dados vivem em ficheiros TypeScript e no `localStorage`.
 
-## Build with Lovable
+## Rotas
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+| Rota | Página |
+| --- | --- |
+| `/` | Início: hero, serviços, "Como funciona", testemunhos |
+| `/precos` | Planos (mensal/anual com 15% de desconto) e FAQ |
+| `/marcar` | Formulário de marcação (validação zod, guarda no localStorage) |
+| `/area-cliente` | Lista de marcações, estados, resumo e gráfico por mês |
+| `/sobre` | Equipa, mapa e horário |
+| qualquer outra | Página 404 |
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+Routing uses TanStack Router (file-based, `src/routes/`), the router fixed by this stack.
 
-## Development
+## Variáveis de ambiente
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+| Variável | Predefinição |
+| --- | --- |
+| `VITE_SHOP_NAME` | `Oficina Lume` |
+| `VITE_SHOP_PHONE` | `+351 218 123 456` |
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+Defina-as num ficheiro `.env` na raiz, ex.: `VITE_SHOP_PHONE="+351 912 000 000"`.
 
-## Built with
+## Dados locais
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+- Marcações: `localStorage["oficina-lume:bookings"]`
+- Tema claro/escuro: `localStorage["oficina-lume:theme"]`

@@ -10,33 +10,73 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AreaClienteRouteImport } from './routes/area-cliente'
+import { Route as MarcarRouteImport } from './routes/marcar'
+import { Route as PrecosRouteImport } from './routes/precos'
+import { Route as SobreRouteImport } from './routes/sobre'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AreaClienteRoute = AreaClienteRouteImport.update({
+  id: '/area-cliente',
+  path: '/area-cliente',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarcarRoute = MarcarRouteImport.update({
+  id: '/marcar',
+  path: '/marcar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrecosRoute = PrecosRouteImport.update({
+  id: '/precos',
+  path: '/precos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SobreRoute = SobreRouteImport.update({
+  id: '/sobre',
+  path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/area-cliente': typeof AreaClienteRoute
+  '/marcar': typeof MarcarRoute
+  '/precos': typeof PrecosRoute
+  '/sobre': typeof SobreRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/area-cliente': typeof AreaClienteRoute
+  '/marcar': typeof MarcarRoute
+  '/precos': typeof PrecosRoute
+  '/sobre': typeof SobreRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/area-cliente': typeof AreaClienteRoute
+  '/marcar': typeof MarcarRoute
+  '/precos': typeof PrecosRoute
+  '/sobre': typeof SobreRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/area-cliente' | '/marcar' | '/precos' | '/sobre'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/area-cliente' | '/marcar' | '/precos' | '/sobre'
+  id: '__root__' | '/' | '/area-cliente' | '/marcar' | '/precos' | '/sobre'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AreaClienteRoute: typeof AreaClienteRoute
+  MarcarRoute: typeof MarcarRoute
+  PrecosRoute: typeof PrecosRoute
+  SobreRoute: typeof SobreRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +88,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/area-cliente': {
+      id: '/area-cliente'
+      path: '/area-cliente'
+      fullPath: '/area-cliente'
+      preLoaderRoute: typeof AreaClienteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/marcar': {
+      id: '/marcar'
+      path: '/marcar'
+      fullPath: '/marcar'
+      preLoaderRoute: typeof MarcarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/precos': {
+      id: '/precos'
+      path: '/precos'
+      fullPath: '/precos'
+      preLoaderRoute: typeof PrecosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sobre': {
+      id: '/sobre'
+      path: '/sobre'
+      fullPath: '/sobre'
+      preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AreaClienteRoute: AreaClienteRoute,
+  MarcarRoute: MarcarRoute,
+  PrecosRoute: PrecosRoute,
+  SobreRoute: SobreRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
