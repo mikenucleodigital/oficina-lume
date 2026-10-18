@@ -43,7 +43,7 @@ function Marcar() {
 
   const onSubmit = (v: FormValues) => {
     addBooking({ ...v, date: format(v.date, "yyyy-MM-dd") });
-    toast.success("Marcação recebida!", { description: `Até ${format(v.date, "d 'de' MMMM", { locale: pt })}. Vamos ligar-lhe para confirmar.` });
+    toast.success("Marcação recebida!", { description: `Para ${format(v.date, "d 'de' MMMM", { locale: pt })}. Vamos ligar-lhe para confirmar.` });
     form.reset();
   };
 
