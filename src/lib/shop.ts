@@ -1,5 +1,5 @@
-export const SHOP_NAME: string = import.meta.env.VITE_SHOP_NAME || "Oficina Lume";
-export const SHOP_PHONE: string = import.meta.env.VITE_SHOP_PHONE || "+351 218 123 456";
+export const SHOP_NAME: string = import.meta.env['VITE_SHOP_NAME'] || "Oficina Lume";
+export const SHOP_PHONE: string = import.meta.env['VITE_SHOP_PHONE'] || "+351 218 123 456";
 export const SHOP_ADDRESS = "Rua da Graça 112, 1170-168 Lisboa";
 export const SHOP_EMAIL = "ola@oficinalume.pt";
 
