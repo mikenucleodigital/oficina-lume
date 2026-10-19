@@ -32,3 +32,4 @@ Defina-as num ficheiro `.env` na raiz, ex.: `VITE_SHOP_PHONE="+351 912 000 000"`
 
 teste 10 a
 teste 10 b
+teste 10 c
