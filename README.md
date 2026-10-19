@@ -28,3 +28,6 @@ Defina-as num ficheiro `.env` na raiz, ex.: `VITE_SHOP_PHONE="+351 912 000 000"`
 
 - Marcações: `localStorage["oficina-lume:bookings"]`
 - Tema claro/escuro: `localStorage["oficina-lume:theme"]`
+
+
+teste 10 a
