@@ -31,7 +31,7 @@ export function Footer() {
       </div>
       <div className="border-t border-current/15 py-5 text-center text-xs opacity-70">
         <p>© {new Date().getFullYear()} {SHOP_NAME}. Todos os direitos reservados.</p>
-        <p className="mt-1">Build de teste 1 · Hosterix</p>
+        <p className="mt-1">Build de teste 2 · Hosterix</p>
       </div>
     </footer>
   );
