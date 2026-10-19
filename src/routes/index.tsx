@@ -39,7 +39,7 @@ function Index() {
         <div className="absolute inset-0 -z-10 bg-hero-overlay" />
         <div className="mx-auto max-w-6xl px-4 py-28 md:py-40">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary">Graça · Lisboa</p>
-          <h1 className="mt-4 max-w-2xl text-5xl font-semibold leading-[1.05] text-primary-foreground md:text-7xl">A sua bicicleta, afinada como deve ser.</h1>
+          <h1 className="mt-4 max-w-2xl text-5xl font-semibold leading-[1.05] text-primary-foreground md:text-7xl">A tua bicicleta, pronta em 24 horas</h1>
           <p className="mt-6 max-w-lg text-lg text-primary-foreground/85">Na {SHOP_NAME} tratamos de revisões, travões e mudanças com peças de qualidade e prazos que se cumprem.</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg"><Link to="/marcar">Marcar serviço</Link></Button>
